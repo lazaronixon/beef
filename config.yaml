@@ -105,7 +105,7 @@ beef:
         db_file: "beef.db"
 
         # db connection information is only used for mysql/postgres
-        db_host: "ec2-54-163-246-154"
+        db_host: "ec2-54-163-246-154.compute-1.amazonaws.com"
         db_port: 5432
         db_name: "dfc1rektkc0qr8"
         db_user: "fbsukbbwyhslsd"
