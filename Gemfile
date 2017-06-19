@@ -29,12 +29,12 @@ end
 
 # SQLite support
 group :sqlite do
-  gem 'dm-sqlite-adapter'
+  # gem 'dm-sqlite-adapter'
 end
 
 # PostgreSQL support
 group :postgres do
-  #gem dm-postgres-adapter
+  gem dm-postgres-adapter
 end
 
 # MySQL support
