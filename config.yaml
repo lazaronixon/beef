@@ -46,6 +46,9 @@ beef:
         #public: ""      # public hostname/IP address
         #public_port: "" # public port (experimental)
 
+        public: "beefnx.herokuapp.com"
+        public_port: "80"
+
         # Web Admin user interface URI
         web_ui_basepath: "/ui"
 
@@ -102,18 +105,18 @@ beef:
         db_file: "beef.db"
 
         # db connection information is only used for mysql/postgres
-        db_host: "localhost"
-        db_port: 3306
-        db_name: "beef"
-        db_user: "beef"
-        db_passwd: "beef"
+        db_host: "ec2-54-163-246-154"
+        db_port: 5432
+        db_name: "dfc1rektkc0qr8"
+        db_user: "fbsukbbwyhslsd"
+        db_passwd: "13c4ef29ac93171537984cffa64a073a8384507f888f0e9d409cdfd300d09fbf"
         db_encoding: "UTF-8"
 
     # Credentials to authenticate in BeEF.
     # Used by both the RESTful API and the Admin_UI extension
     credentials:
         user:   "beef"
-        passwd: "beef"
+        passwd: "N9435j"
 
     # Autorun Rule Engine
     autorun:
