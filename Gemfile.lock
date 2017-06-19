@@ -15,16 +15,16 @@ GEM
       dm-core (~> 1.2.0)
     dm-migrations (1.2.0)
       dm-core (~> 1.2.0)
+    dm-postgres-adapter (1.2.0)
+      dm-do-adapter (~> 1.2.0)
+      do_postgres (~> 0.10.6)
     dm-serializer (1.2.2)
       dm-core (~> 1.2.0)
       fastercsv (~> 1.5)
       json (~> 1.6)
       json_pure (~> 1.6)
       multi_json (~> 1.0)
-    dm-sqlite-adapter (1.2.0)
-      dm-do-adapter (~> 1.2.0)
-      do_sqlite3 (~> 0.10.6)
-    do_sqlite3 (0.10.17)
+    do_postgres (0.10.17)
       data_objects (= 0.10.17)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
@@ -110,8 +110,8 @@ DEPENDENCIES
   data_objects
   dm-core
   dm-migrations
+  dm-postgres-adapter
   dm-serializer
-  dm-sqlite-adapter
   em-websocket
   erubis
   espeak-ruby (~> 1.0.4)

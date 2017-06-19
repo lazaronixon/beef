@@ -34,7 +34,7 @@ end
 
 # PostgreSQL support
 group :postgres do
-  gem dm-postgres-adapter
+  gem 'dm-postgres-adapter'
 end
 
 # MySQL support
