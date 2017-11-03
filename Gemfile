@@ -9,7 +9,7 @@
 gem 'eventmachine'
 gem 'thin'
 gem 'sinatra'
-gem 'rack'
+gem 'rack', '~> 1.6.5'
 gem 'em-websocket' # WebSocket support
 gem 'uglifier'
 gem 'mime-types'
@@ -19,9 +19,9 @@ gem 'term-ansicolor', :require => 'term/ansicolor'
 gem 'dm-core'
 gem 'json'
 gem 'data_objects'
-gem 'rubyzip', '~> 1.2.1'
-gem 'espeak-ruby', '~> 1.0.4' # Text-to-Voice
-gem 'nokogiri', '~> 1.7.1'
+gem 'rubyzip', '>= 1.2.1'
+gem 'espeak-ruby', '>= 1.0.4' # Text-to-Voice
+gem 'nokogiri', '>= 1.7'
 
 if RUBY_PLATFORM.downcase.include?('linux')
   gem 'therubyracer', '~> 0.12.2', '<= 0.12.2'
@@ -56,9 +56,14 @@ group :ext_msf do
   gem 'msfrpc-client'
 end
 
-# Twitter Notifications extension
-group :ext_twitter do
-  #gem 'twitter', '>= 5.0.0'
+# Notifications extension
+group :ext_notifications do
+  # Pushover
+  gem 'rushover'
+  # Slack
+  gem 'slack-notifier'
+  # Twitter
+  gem 'twitter', '>= 5.0.0'
 end
 
 # DNS extension
@@ -92,7 +97,7 @@ if ENV['BEEF_TEST']
   # sudo port install libxml2 libxslt
   gem 'capybara'
   # RESTful API tests/generic command module tests
-  gem 'rest-client', '~> 2.0.1'
+  gem 'rest-client', '>= 2.0.1'
 end
 end
 
