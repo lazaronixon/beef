@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2006-2017 Wade Alcorn - wade@bindshell.net
+# Copyright (c) 2006-2019 Wade Alcorn - wade@bindshell.net
 # Browser Exploitation Framework (BeEF) - http://beefproject.com
 # See the file 'doc/COPYING' for copying permission
 #
@@ -17,8 +17,8 @@ class TC_Login < Test::Unit::TestCase
     sleep 2.0
     BeefTest.save_screenshot(session)
     session.should have_title('BeEF Authentication')
-    session.fill_in 'user', :with => 'beef'
-    session.fill_in 'pass', :with => 'beef'
+    session.fill_in 'user', :with => BEEF_USER
+    session.fill_in 'pass', :with => BEEF_PASSWD
     BeefTest.save_screenshot(session)
     session.click_button('Login')
     sleep 10.0
@@ -76,7 +76,7 @@ class TC_Login < Test::Unit::TestCase
 
     attacker.should have_content(VICTIM_DOMAIN)
     attacker.should have_content('127.0.0.1')
-    attacker.click_on('127.0.0.1')
+    attacker.click_on("127.0.0.1", match: :first)
 
     sleep 1.0
 

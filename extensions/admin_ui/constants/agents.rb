@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2006-2017 Wade Alcorn - wade@bindshell.net
+# Copyright (c) 2006-2019 Wade Alcorn - wade@bindshell.net
 # Browser Exploitation Framework (BeEF) - http://beefproject.com
 # See the file 'doc/COPYING' for copying permission
 #
@@ -7,7 +7,7 @@ module BeEF
 module Extension
 module AdminUI
 module Constants
-  
+
   # The User Agent strings for browser detection
   module Agents
 
@@ -20,6 +20,8 @@ module Constants
     AGENT_IE_IMG          = 'msie.png'
     AGENT_EDGE_UA_STR     = 'Edge'
     AGENT_EDGE_IMG        = 'edge.png'
+    AGENT_EPIPHANY_UA_STR = 'Epiphany'
+    AGENT_EPIPHANY_IMG    = 'epiphany.png'
     AGENT_SAFARI_UA_STR   = 'Safari'
     AGENT_SAFARI_IMG      = 'safari.png'
     AGENT_KONQ_UA_STR     = 'Konqueror'

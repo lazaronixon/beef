@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2006-2017 Wade Alcorn - wade@bindshell.net
+# Copyright (c) 2006-2019 Wade Alcorn - wade@bindshell.net
 # Browser Exploitation Framework (BeEF) - http://beefproject.com
 # See the file 'doc/COPYING' for copying permission
 #
@@ -65,21 +65,22 @@ module Models
     def self.browser_icon(session_id)
 
       browser = get(session_id, 'BrowserName')
- 
-      return BeEF::Extension::AdminUI::Constants::Agents::AGENT_IE_IMG      if browser.eql? 'IE' # Internet Explorer
-      return BeEF::Extension::AdminUI::Constants::Agents::AGENT_EDGE_IMG    if browser.eql? 'E'  # Microsoft Edge
-      return BeEF::Extension::AdminUI::Constants::Agents::AGENT_FIREFOX_IMG if browser.eql? 'FF' # Firefox
-      return BeEF::Extension::AdminUI::Constants::Agents::AGENT_SAFARI_IMG  if browser.eql? 'S'  # Safari
-      return BeEF::Extension::AdminUI::Constants::Agents::AGENT_CHROME_IMG  if browser.eql? 'C'  # Chrome
-      return BeEF::Extension::AdminUI::Constants::Agents::AGENT_OPERA_IMG   if browser.eql? 'O'  # Opera
-      return BeEF::Extension::AdminUI::Constants::Agents::AGENT_MIDORI_IMG  if browser.eql? 'MI' # Midori
-      return BeEF::Extension::AdminUI::Constants::Agents::AGENT_ODYSSEY_IMG if browser.eql? 'OD' # Odyssey
-      return BeEF::Extension::AdminUI::Constants::Agents::AGENT_BRAVE_IMG if browser.eql? 'BR' # Brave
+
+      return BeEF::Extension::AdminUI::Constants::Agents::AGENT_IE_IMG       if browser.eql? 'IE' # Internet Explorer
+      return BeEF::Extension::AdminUI::Constants::Agents::AGENT_EDGE_IMG     if browser.eql? 'E'  # Microsoft Edge
+      return BeEF::Extension::AdminUI::Constants::Agents::AGENT_FIREFOX_IMG  if browser.eql? 'FF' # Firefox
+      return BeEF::Extension::AdminUI::Constants::Agents::AGENT_EPIPHANY_IMG if browser.eql? 'EP' # Epiphany
+      return BeEF::Extension::AdminUI::Constants::Agents::AGENT_SAFARI_IMG   if browser.eql? 'S'  # Safari
+      return BeEF::Extension::AdminUI::Constants::Agents::AGENT_CHROME_IMG   if browser.eql? 'C'  # Chrome
+      return BeEF::Extension::AdminUI::Constants::Agents::AGENT_OPERA_IMG    if browser.eql? 'O'  # Opera
+      return BeEF::Extension::AdminUI::Constants::Agents::AGENT_MIDORI_IMG   if browser.eql? 'MI' # Midori
+      return BeEF::Extension::AdminUI::Constants::Agents::AGENT_ODYSSEY_IMG  if browser.eql? 'OD' # Odyssey
+      return BeEF::Extension::AdminUI::Constants::Agents::AGENT_BRAVE_IMG    if browser.eql? 'BR' # Brave
 
 
       BeEF::Extension::AdminUI::Constants::Agents::AGENT_UNKNOWN_IMG
     end
-  
+
     #
     # Returns the icon representing the os type the
     # zombie is running (i.e. Windows, Linux)
